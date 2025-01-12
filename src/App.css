@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
   color: white;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.form-container {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: #111;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-field {
+  width: 90%;
+  padding: 1rem;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background-color: #222;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+textarea.input-field {
+  min-height: 60px;
+  resize: vertical;
+}
+
+.file-input {
+  width: 90%;
+  padding: 1rem;
+  background-color: #222;
+  border: 2px solid #333;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.submit-button {
+  width: 200px;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submit-button:hover {
+  background-color: #357abd;
+  transform: translateY(-2px);
+}
+
+.response-container {
+  width: 90%;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #111;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+::placeholder {
+  color: #666;
+}
+
+.error-message {
+  width: 90%;
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: rgba(255, 0, 0, 0.1);
+  border: 1px solid #ff0000;
+  border-radius: 8px;
+  color: #ff0000;
+  text-align: center;
 }
